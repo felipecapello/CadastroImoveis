@@ -1,11 +1,9 @@
+imoveis = []
+caracImovel = {}
 do {
-    imoveis = []
-    caracImovel = {}
-    opcao = prompt("Quantidade de imoveis cadastrados: " + (imoveis.lenght + 1) + "\n \n Escolha uma opção: \n 1 - Cadastrar novo imóvel \n 2 - Mostrar todos os imóveis cadastrados \n 3 - Encerrar programa")
+    let quantidadeImoveis = imoveis.lenght
+    opcao = prompt("Quantidade de imoveis cadastrados: " + (quantidadeImoveis) + "\n \n Escolha uma opção: \n 1 - Cadastrar novo imóvel \n 2 - Mostrar todos os imóveis cadastrados \n 3 - Encerrar programa")
     
-    for(i=0; i<imoveis.lenght; i++){
-        imoveis += [caracImovel.proprietario + "\n" + caracImovel.quartos + "\n" + caracImovel.banheiros + "\n" + caracImovel.garagem]
-    }
 
     switch(opcao){
         case "1": 
@@ -13,7 +11,7 @@ do {
          caracImovel.quartos =  prompt("Digite a quantidade de quartos")
          caracImovel.banheiros =  prompt("Digite a quantidade de banheiros")
          caracImovel.garagem =  prompt("Possui garagem?")
-         imoveis += [caracImovel.proprietario + "\n" + caracImovel.quartos + "\n" + caracImovel.banheiros + "\n" + caracImovel.garagem]
+         imoveis += [caracImovel.proprietario + "  " + caracImovel.quartos + " " + caracImovel.banheiros + " " + caracImovel.garagem + "\n"]
          break
         case "2":
          alert("Aqui estão todos os imóveis! \n" + imoveis)
